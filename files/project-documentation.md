@@ -40,7 +40,7 @@ sudo apt install sshpass -y
 ```
 - Then changes were made to the SSH server's configuration from disallowing password authentication (PasswordAuthentication no) to allowing password authentication (PasswordAuthentication yes)
 ```bash
-changes the SSH server's configuration from disallowing password authentication (PasswordAuthentication no) to allowing password authentication (PasswordAuthentication yes)
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 ```
 -Then the SSH server service was stopped and then immediately restarted effect configuration changes 
 ```bash
@@ -74,7 +74,7 @@ sudo apt-get install -y avahi-daemon libnss-mdns
 
 - Then changes were made to the SSH server's configuration from disallowing password authentication (PasswordAuthentication no) to allowing password authentication (PasswordAuthentication yes)
 ```bash
-changes the SSH server's configuration from disallowing password authentication (PasswordAuthentication no) to allowing password authentication (PasswordAuthentication yes)
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 ```
 -Then the SSH server service was stopped and then immediately restarted effect configuration changes 
 ```bash
@@ -141,4 +141,4 @@ sudo systemctl reload apache2
 
 Finally the apache page can be accessed with my IP "192.168.1.100" and below is a display 
 
-![A webpage displaying APACHE webpage](apachedisplay.png)
+![A webpage displaying APACHE webpage](apachedisplay.jpg)
